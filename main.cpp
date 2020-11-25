@@ -1,12 +1,13 @@
 // tictoktoeGame.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 #include<iostream>
+
 #include"Header.h"
 
 int main()
 {
 Start: int i;
-	functions function;
+	Functions function;
 	do {
 		function.display();//For displaying the Tic Toc Toe board 
 		function.choose();//For Selecting the numbers in the board
@@ -22,8 +23,10 @@ Start: int i;
 		if (x == 'y') {
 			goto Start;
 		}
-		else
+		if (x == 'n')
+		{
 			std::cout << "Quitting..." << std::endl;
+		}
 	}
 return 0;
 

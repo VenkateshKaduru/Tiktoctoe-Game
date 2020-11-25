@@ -1,14 +1,14 @@
 #include"Header.h"
 #include<iostream>
 
-functions::functions() {
+Functions::Functions() {
 	square = { '0','1','2','3','4','5','6','7','8' };
 	Player = 1;
 	//x = 1;
 }
 
 
-void functions::display() {// for displaying the tictoktoe board 
+void Functions::display() {// for displaying the tictoktoe board 
 
 	system("cls");
 
@@ -31,7 +31,7 @@ void functions::display() {// for displaying the tictoktoe board
 	std::cout << std::endl;
 }
 
-int functions::choose() {// for selecting the mark positions through numbers
+int Functions::choose() {// for selecting the mark positions through numbers
 
 	Player = (Player % 2) ? 1 : 2;
 	std::cout << "Player: " << Player << " Select a number from the display and enter: ";
@@ -77,7 +77,7 @@ int functions::choose() {// for selecting the mark positions through numbers
 	return mark;
 }
 
-int functions::check() {// for checking the marks
+int Functions::check() {// for checking the marks
 
 	if (square[0] == square[1] && square[1] == square[2]) // is 1st row equal
 		return 1;
@@ -113,7 +113,7 @@ int functions::check() {// for checking the marks
 
 }
 
-void functions::result(int i) {// win or draw
+void Functions::result(int i) {// win or draw
 	if (i == 1)
 	{
 		std::cout << "\t\tPlayer-" << Player << " win ";
@@ -124,5 +124,4 @@ void functions::result(int i) {// win or draw
 	std::cout << "\t\tGame Draw";
 	std::cout << std::endl;
 	std::cout << std::endl;
-	
 }

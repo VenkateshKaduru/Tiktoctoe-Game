@@ -3,7 +3,7 @@
 #define TICTOKTOE_H_
 
 #include<vector>
-class functions {
+class Functions {
 
 private:
 	std::vector<char> square;
@@ -11,7 +11,7 @@ private:
 	int choice;
 	char mark;
 public:
-	functions();
+	Functions();
 	void display();
 	int choose();
 	int check();
