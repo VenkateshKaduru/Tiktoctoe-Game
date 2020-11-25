@@ -15,7 +15,7 @@ public:
 	void display();
 	int choose();
 	int check();
-	int result(int i);
+	void result(int i);
 
 };
 

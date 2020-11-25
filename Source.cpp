@@ -113,7 +113,7 @@ int functions::check() {// for checking the marks
 
 }
 
-int functions::result(int i) {// win or draw
+void functions::result(int i) {// win or draw
 	if (i == 1)
 	{
 		std::cout << "\t\tPlayer-" << Player << " win ";
@@ -124,5 +124,5 @@ int functions::result(int i) {// win or draw
 	std::cout << "\t\tGame Draw";
 	std::cout << std::endl;
 	std::cout << std::endl;
-	return i;
+	
 }
