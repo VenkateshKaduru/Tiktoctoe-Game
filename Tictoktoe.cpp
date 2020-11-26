@@ -40,43 +40,54 @@ void Tictoktoe::selectPlayerNumerandMark() {
 	std::cin >> m_select;
 	m_mark = (m_player == 1) ? 'X' : 'O';
 
-	switch (m_select)
+	if (m_select>= 0 && m_select <=8)
 	{
-	case 0:
-		m_square[0] = m_mark;
-		break;
-	case 1:
-		m_square[1] = m_mark;
-		break;
-	case 2:
-		m_square[2] = m_mark;
-		break;
-	case 3:
-		m_square[3] = m_mark;
-		break;
-	case 4:
-		m_square[4] = m_mark;
-		break;
-	case 5:
-		m_square[5] = m_mark;
-		break;
-	case 6:
-		m_square[6] = m_mark;
-		break;
-	case 7:
-		m_square[7] = m_mark;
-		break;
-	case 8:
-		m_square[8] = m_mark;
-		break;
-	default:
-		std::cout << "Invalid number entered";
+		m_square[m_select]= m_mark;
+	}
+	else
+	{
+		std::cout << "Invalid entry" << std::endl;
 		m_player--;
 		std::cin.ignore();
 		std::cin.get();
-		break;
 	}
-	
+//	switch (m_select)
+//	{
+//	case 0:
+//		m_square[0] = m_mark;
+//		break;
+//	case 1:
+//		m_square[1] = m_mark;
+//		break;
+//	case 2:
+//		m_square[2] = m_mark;
+//		break;
+//	case 3:
+//		m_square[3] = m_mark;
+//		break;
+//	case 4:
+//		m_square[4] = m_mark;
+//		break;
+//	case 5:
+//		m_square[5] = m_mark;
+//		break;
+//	case 6:
+//		m_square[6] = m_mark;
+//		break;
+//	case 7:
+//		m_square[7] = m_mark;
+//		break;
+//	case 8:
+//		m_square[8] = m_mark;
+//		break;
+//	default:
+//		std::cout << "Invalid number entered";
+//		m_player--;
+//		std::cin.ignore();
+//		std::cin.get();
+//		break;
+//	}
+//	
 }
 
 int Tictoktoe::checkRowsandColoums() {
