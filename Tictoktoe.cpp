@@ -2,15 +2,15 @@
 #include<iostream>
 
 Tictoktoe::Tictoktoe() {
-	reset();
+	restartGame();
 }
 
-void Tictoktoe::reset() {
+void Tictoktoe::restartGame() {
 
 	m_square = { '0','1','2','3','4','5','6','7','8' };
 	m_player = 1;
 }
-void Tictoktoe::display() {// for displaying the tictoktoe board 
+void Tictoktoe::displayTictoktoeBoard() {
 
 	system("cls");
 
@@ -33,14 +33,14 @@ void Tictoktoe::display() {// for displaying the tictoktoe board
 	std::cout << std::endl;
 }
 
-int Tictoktoe::choose() {// for selecting the mark positions through numbers
+void Tictoktoe::selectPlayerNumerandMark() {
 
 	m_player = (m_player % 2) ? 1 : 2;
 	std::cout << "Player: " << m_player << " Select a number from the display and enter: ";
-	std::cin >> m_choice;
+	std::cin >> m_select;
 	m_mark = (m_player == 1) ? 'X' : 'O';
 
-	switch (m_choice)
+	switch (m_select)
 	{
 	case 0:
 		m_square[0] = m_mark;
@@ -76,10 +76,10 @@ int Tictoktoe::choose() {// for selecting the mark positions through numbers
 		std::cin.get();
 		break;
 	}
-	return m_mark;
+	
 }
 
-int Tictoktoe::check() {// for checking the marks
+int Tictoktoe::checkRowsandColoums() {
 
 	if (m_square[0] == m_square[1] && m_square[1] == m_square[2]) // is 1st row equal
 		return 1;
@@ -115,7 +115,7 @@ int Tictoktoe::check() {// for checking the marks
 
 }
 
-void Tictoktoe::result(int i) {// win or draw
+void Tictoktoe::resultWinorDraw(int i) {
 	if (i == 1)
 	{
 		std::cout << "\t\tPlayer-" << m_player << " win ";
