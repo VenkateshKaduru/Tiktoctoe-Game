@@ -29,7 +29,6 @@ int main()
 
 		function.restartGame();
 	}
-	
 	std::cout << "Quitting..." << std::endl;
 
 	return 0;

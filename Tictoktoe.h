@@ -64,7 +64,6 @@ public:
 	* @Retun none.
 	**/
 	void restartGame();
-
 };
 
 #endif // !TICTOKTOE
